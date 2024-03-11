@@ -18,7 +18,7 @@ permissions: {}
 
 jobs:
   test:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest #ubuntu-22.04
     continue-on-error: ${{ matrix.allow_failure }}
     timeout-minutes: 15
     permissions:
