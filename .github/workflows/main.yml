@@ -55,7 +55,7 @@ jobs:
         if: always()
         uses: actions/cache/restore@v4
         with:
-          path: ${{ github.workspace }}/.tox/py312/.pytest_cache/v/pytest_ranking_data
+          path: ${{ github.workspace }}/.tox/py312-dj50-postgres-xdist-coverage/.pytest_cache/v/pytest_ranking_data
           key: pytest-ranking-cache-${{ runner.os }}-${{ matrix.python }}
 
       - name: Run tox
@@ -66,7 +66,7 @@ jobs:
         if: always()
         uses: actions/cache/save@v4
         with:
-          path: ${{ github.workspace }}/.tox/py312/.pytest_cache/v/pytest_ranking_data
+          path: ${{ github.workspace }}/.tox/py312-dj50-postgres-xdist-coverage/.pytest_cache/v/pytest_ranking_data
           key: pytest-ranking-cache-${{ runner.os }}-${{ matrix.python }}-${{ github.run_id }}
 
       # - name: Report coverage
